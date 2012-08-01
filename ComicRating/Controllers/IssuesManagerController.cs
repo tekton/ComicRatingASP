@@ -18,7 +18,7 @@ namespace ComicRating.Controllers
 
         public ViewResult Index()
         {
-            var issues = db.Issues.Include(i => i.series);
+            var issues = db.Issues.Include(i => i.series).Include(r => r.ratings);
             return View(issues.ToList());
         }
 

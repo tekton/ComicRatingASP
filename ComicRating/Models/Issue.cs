@@ -12,7 +12,8 @@ namespace ComicRating.Models
 
         [DisplayName("Series")]
         public int SeriesID { get; set; }
-
+        //[ScaffoldColumn(false)]
+        //public string SeriesName { get; set; }
         [DisplayName("Title")]
         public string title { get; set; }
 
