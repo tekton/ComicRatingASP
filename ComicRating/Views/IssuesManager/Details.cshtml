@@ -1,0 +1,30 @@
+﻿@model ComicRating.Models.Issue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Issue</legend>
+
+    <div class="display-label">series</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.series.name)
+    </div>
+
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">number</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.number)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

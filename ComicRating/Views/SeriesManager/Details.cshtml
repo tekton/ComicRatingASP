@@ -1,0 +1,40 @@
+﻿@model ComicRating.Models.Series
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Series</legend>
+
+    <div class="display-label">publisher</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publisher.name)
+    </div>
+
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">max_issue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.max_issue)
+    </div>
+
+    <div class="display-label">start_year</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.start_year)
+    </div>
+
+    <div class="display-label">volume</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.volume)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SeriesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
