@@ -63,7 +63,7 @@ namespace ComicRating.Controllers
         public ActionResult issue(int id)
         {
             ViewBag.message = id;
-            var issue = db.Issues.Include("Series").Single(g => g.id == id);
+            var issue = db.Issues.Include("Series").Single(g => g.IssueID == id);
             return View(issue);
         }
 

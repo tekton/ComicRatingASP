@@ -10,7 +10,7 @@ namespace ComicRating.Models
     {
         public DbSet<Issue> Issues { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
-        //public DbSet<Rating> Ratings { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         public DbSet<Series> Series { get; set; }
 

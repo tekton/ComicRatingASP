@@ -1,0 +1,40 @@
+﻿@model ComicRating.Models.Rating
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Rating</legend>
+
+    <div class="display-label">issue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.issue.title)
+    </div>
+
+    <div class="display-label">overall</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.overall)
+    </div>
+
+    <div class="display-label">art</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.art)
+    </div>
+
+    <div class="display-label">story</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.story)
+    </div>
+
+    <div class="display-label">user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RatingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -10,7 +10,7 @@
     @foreach (var s in Model.issue)
     {
         <li>
-            @Html.ActionLink(@Model.name+" "+@s.number, "issue", new { id = @s.id })
+            @Html.ActionLink(@Model.name+" "+@s.number, "issue", new { id = @s.IssueID })
 
         </li>
     }

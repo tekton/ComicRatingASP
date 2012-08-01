@@ -24,7 +24,9 @@
             </nav>
         </header>
         <section id="main">
+            @{Html.RenderAction("PublisherRightList", "Home");}
             @RenderBody()
+            <div class="c_both">&nbsp;</div>
         </section>
         <footer>
         </footer>

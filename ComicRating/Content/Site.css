@@ -322,3 +322,18 @@ div#title {
 .tri-state {
     width: 6em;
 }
+
+/*** Customized Stuff ***/
+
+#PublishersRightList 
+{
+    float:right;
+    width: 200px;
+    border-left: 2px solid gray;
+    padding-left: 15px;
+}
+
+.c_both 
+{
+    clear:both;
+}

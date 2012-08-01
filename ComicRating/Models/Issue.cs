@@ -20,8 +20,10 @@ namespace ComicRating.Models
         public string number { get; set; }
 
         [ScaffoldColumn(false)]
-        public int id { get; set; }
+        public int IssueID { get; set; }
 
         public virtual Series series { get; set; }
+
+        public List<Rating> ratings { get; set; }
     }
 }

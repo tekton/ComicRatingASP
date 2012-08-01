@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ComicRating.Models.Publisher>
+<div id="PublishersRightList">
+<h3>List of Publishers</h3>
+    <ul>
+        @foreach(var p in Model)
+        {
+            <li>
+                @Html.ActionLink(@p.name, "SeriesByPublisher", "Browse", new { id = @p.name }, null)
+            </li>
+        }
+    </ul>
+</div>
