@@ -65,8 +65,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BrowseController.cs" />
     <Compile Include="Controllers\ComicsController.cs" />
-    <Compile Include="Controllers\ComicsManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IssuesManagerController.cs" />
+    <Compile Include="Controllers\SeriesManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,19 +176,34 @@
     <Content Include="Views\Browse\Series.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ComicsManager\Index.cshtml" />
+    <Content Include="Views\IssuesManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ComicsManager\Details.cshtml" />
+    <Content Include="Views\IssuesManager\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ComicsManager\Create.cshtml" />
+    <Content Include="Views\IssuesManager\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ComicsManager\Edit.cshtml" />
+    <Content Include="Views\IssuesManager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ComicsManager\Delete.cshtml" />
+    <Content Include="Views\IssuesManager\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SeriesManager\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SeriesManager\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SeriesManager\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SeriesManager\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SeriesManager\Delete.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
