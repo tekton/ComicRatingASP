@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ComicRating.Models.Issue>
+
+@{
+    ViewBag.Title = "All";
+}
+
+<h2>All</h2>
+
+<div>Select from @Model.Count() issues::</div>
+<ul>
+    @foreach (var issue in Model)
+    {
+        <li> @Html.ActionLink(issue.series.name+" "+issue.number, "issue", new {id = issue.id} )</li>
+    }
+</ul>

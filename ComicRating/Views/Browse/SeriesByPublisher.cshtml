@@ -1,0 +1,16 @@
+﻿@model ComicRating.Models.Publisher
+
+@{
+    ViewBag.Title = "SeriesByPublisher";
+}
+
+<h2>SeriesByPublisher</h2>
+
+<ul>
+    @foreach (var s in Model.Series)
+    {
+        <li>
+            @Html.ActionLink(@s.name, "Series", new { id = @s.name })
+        </li>
+    }
+</ul>

@@ -1,0 +1,17 @@
+﻿@model ComicRating.Models.Series
+
+@{
+    ViewBag.Title = "Series";
+}
+
+<h2>@ViewBag.title</h2>
+
+<ul>
+    @foreach (var s in Model.issue)
+    {
+        <li>
+            @Html.ActionLink(@Model.name+" "+@s.number, "issue", new { id = @s.id })
+
+        </li>
+    }
+</ul>

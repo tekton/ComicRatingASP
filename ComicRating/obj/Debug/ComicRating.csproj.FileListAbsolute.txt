@@ -1,0 +1,7 @@
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\bin\ComicRating.dll
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\bin\ComicRating.pdb
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\bin\EntityFramework.dll
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\bin\EntityFramework.xml
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\obj\Debug\ResolveAssemblyReference.cache
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\obj\Debug\ComicRating.dll
+c:\users\tekton\documents\visual studio 2010\Projects\ComicRating\ComicRating\obj\Debug\ComicRating.pdb
