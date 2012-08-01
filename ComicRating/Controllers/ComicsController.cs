@@ -6,6 +6,13 @@ using System.Web.Mvc;
 
 namespace ComicRating.Controllers
 {
+    /****
+     * 
+     * 
+     * 
+     * 
+     * @Depricated 
+     */
     public class ComicsController : Controller
     {
         //

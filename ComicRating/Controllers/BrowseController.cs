@@ -7,6 +7,15 @@ using ComicRating.Models;
 
 namespace ComicRating.Controllers
 {
+    /**
+     * 
+     * The eventual central hub for all workings
+     * 
+     * TODO: add ajax/dynamic linking for ratings while browsing on an issue or series
+     * 
+     * Sparse code to allow for self commenting; todo and comments added as needed
+     * @Author Tyler Agee 
+     */
     public class BrowseController : Controller
     {
 

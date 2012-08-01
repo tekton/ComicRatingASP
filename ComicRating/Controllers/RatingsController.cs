@@ -8,7 +8,10 @@ using System.Web.Mvc;
 using ComicRating.Models;
 
 namespace ComicRating.Controllers
-{ 
+{
+    /***
+     * Partial scaffold, partial custom code for multi layers of db management
+     * */
     public class RatingsController : Controller
     {
         private ComicRateEntities db = new ComicRateEntities();

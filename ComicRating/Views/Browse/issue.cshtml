@@ -5,3 +5,5 @@
 }
 
 <h2>@Model.series.name @Model.number</h2>
+
+@Html.ActionLink("New Rating", "Create", "Ratings", new { id = @Model.IssueID }, null)

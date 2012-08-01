@@ -7,6 +7,15 @@ using ComicRating.Models;
 
 namespace ComicRating.Controllers
 {
+    /**
+     * Basic startign point, until more is done with user ratings it will remain a blank link site
+     * 
+     * Eventually "Browse" will be the home of most interactions with the site
+     * 
+     * Most comments will be in controllers while model and view code is sparse and self commenting for the most part
+     * 
+     * @Author Tyler Agee
+     */
     public class HomeController : Controller
     {
 

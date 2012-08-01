@@ -9,6 +9,9 @@ using ComicRating.Models;
 
 namespace ComicRating.Controllers
 {
+    /***
+     * Partial scaffold, partial custom code for multi layers of db management
+     * */
     [Authorize(Roles = "Admin")]
     public class SeriesManagerController : Controller
     {

@@ -37,6 +37,8 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ratings.Count)
+
+            @Html.DisplayFor(modelItem => item.ratings)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.IssueID }) |
