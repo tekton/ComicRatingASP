@@ -8,7 +8,8 @@ using System.Web.Mvc;
 using ComicRating.Models;
 
 namespace ComicRating.Controllers
-{ 
+{
+    [Authorize(Roles = "Admin")]
     public class SeriesManagerController : Controller
     {
         private ComicRateEntities db = new ComicRateEntities();
