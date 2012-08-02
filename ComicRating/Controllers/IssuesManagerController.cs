@@ -12,6 +12,7 @@ namespace ComicRating.Controllers
     /***
      * Partial scaffold, partial custom code for multi layers of db management
      * */
+    [Authorize(Roles = "Admin")]
     public class IssuesManagerController : Controller
     {
         private ComicRateEntities db = new ComicRateEntities();

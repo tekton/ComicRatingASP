@@ -17,6 +17,7 @@
         @ViewBag.IssueTitle
 
         @Html.Hidden("IssueID")
+        @Html.HiddenFor(model => model.user)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.overall)
@@ -41,15 +42,14 @@
             @Html.EditorFor(model => model.story)
             @Html.ValidationMessageFor(model => model.story)
         </div>
-
+        @*
         <div class="editor-label">
             @Html.LabelFor(model => model.user)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.user)
+            @Html.TextBoxFor(model => model.user, new { @Value = User.Identity.Name})
             @Html.ValidationMessageFor(model => model.user)
-        </div>
-
+        </div>*@
         <p>
             <input type="submit" value="Create" />
         </p>

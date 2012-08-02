@@ -12,6 +12,7 @@ namespace ComicRating.Controllers
     /***
      * Partial scaffold, partial custom code for multi layers of db management
      * */
+    [Authorize]
     public class RatingsController : Controller
     {
         private ComicRateEntities db = new ComicRateEntities();
@@ -39,11 +40,18 @@ namespace ComicRating.Controllers
 
         public ActionResult Create(int id)
         {
-            
+            //TODO:: check to see if the user has a rating, if they do forward to edit instead!
             Issue issue = db.Issues.Include("Series").Single(i => i.IssueID==id);
             ViewBag.IssueTitle = issue.series.name + " " + issue.number; //new SelectList(db.Issues.Include("Series"), "IssueID", "series.name number");
             ViewBag.IssueID = id;
-            return View();
+
+            var model = new Rating
+            {
+                user = User.Identity.Name,
+                IssueID = id
+            };
+            
+            return View(model);
         } 
 
         //

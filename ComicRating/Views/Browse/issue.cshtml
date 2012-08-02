@@ -7,3 +7,14 @@
 <h2>@Model.series.name @Model.number</h2>
 
 @Html.ActionLink("New Rating", "Create", "Ratings", new { id = @Model.IssueID }, null)
+
+<ul>
+@foreach (var r in Model.ratings)
+{
+    <li>@r.overall :: @r.art :: @r.story</li>
+}
+</ul>
+
+Overall Average :: @ViewBag.overall_avg<br />
+Art Average :: @ViewBag.art_avg<br />
+Story Average :: @ViewBag.story_avg

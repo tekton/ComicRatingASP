@@ -72,7 +72,23 @@ namespace ComicRating.Controllers
         public ActionResult issue(int id)
         {
             ViewBag.message = id;
-            var issue = db.Issues.Include("Series").Single(g => g.IssueID == id);
+            var issue = db.Issues.Include("Series").Include("Ratings").Single(g => g.IssueID == id);
+
+            var ratings = issue.ratings.ToArray();
+            var art = 0;
+            var overall = 0;
+            var story = 0;
+            foreach (var rate in ratings)
+            {
+                art += rate.art;
+                overall += rate.overall;
+                story += rate.story;
+            }
+
+            ViewBag.art_avg = art / ratings.Count();
+            ViewBag.overall_avg = overall / ratings.Count();
+            ViewBag.story_avg = story / ratings.Count();
+
             return View(issue);
         }
 
