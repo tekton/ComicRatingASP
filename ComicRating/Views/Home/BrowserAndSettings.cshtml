@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "BrowserAndSettings";
+}
+
+<p>
+Agent :: @Request.UserAgent <br />
+@*Params :: @Request.Params <br />*@
+Referal :: @Request.UrlReferrer <br />
+Platform :: @Request.Browser.Platform <br />
+Browser Version :: @Request.Browser.Version <br />
+ECMA Script :: @Request.Browser.EcmaScriptVersion
+</p>
+
+<h2>Browser And Settings</h2>
+
+@foreach(KeyValuePair<string,string> x in ViewBag.s) {
+    <div>@x.Key <span>::</span> @x.Value</div>
+}
+
+<p>Addr :: @ViewBag.ip</p>
+
+@*<p>Session ID :: @Session["quad"]</p>*@
+
+@*@section secondary {
+    <div>Seconday information here</div>
+}*@

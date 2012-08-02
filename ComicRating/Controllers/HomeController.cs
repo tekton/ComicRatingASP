@@ -40,5 +40,59 @@ namespace ComicRating.Controllers
             return PartialView(publishers); 
         }
 
+        [ChildActionOnly]
+        public ActionResult browserInfoRightList()
+        {
+            return PartialView();
+        }
+
+        public ActionResult BrowserAndSettings()
+        {
+            //Request.Headers.Keys;
+            //get all the information possible about the browser, system, etc...
+
+            //System.Web.HttpBrowserCapabilitiesBase browser = Request.Browser;
+
+            Dictionary<string, string> browserInfo = new Dictionary<string, string>();
+            Dictionary<string, string> request = new Dictionary<string, string>();
+
+            foreach (string x in Request.ServerVariables)
+            {
+                browserInfo.Add(x, Request.ServerVariables[x]);
+            }
+
+            //browser doesn't have an enumerator...doh
+            //TODO find a way to do something similar...
+            //foreach (var y in Request.Browser)
+            //{
+            //    request.Add(y, Request.Browser.y);
+            //}
+
+            //foreach(string y in Session)
+            //{
+            //    browserInfo.Add(y, Session[y]);
+            //}
+
+            ViewBag.s = browserInfo;
+            ViewBag.ip = this.ip();
+
+            //if (Session("quad") == null)
+            //{
+            //    Session.Add("quad") = DateTime.Now.ToShortTimeString;
+            //}
+            //...and then figure out how to change things in the returned view for it!
+            return View();
+        }
+
+        public string ip()
+        {
+            string ipaddy = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (ipaddy == null || ipaddy == "")
+            {
+                ipaddy = Request.ServerVariables["REMOTE_ADDR"];
+            }
+            return ipaddy;
+        }
+
     }
 }

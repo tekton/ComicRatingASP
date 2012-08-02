@@ -24,7 +24,10 @@
             </nav>
         </header>
         <section id="main">
-            @{Html.RenderAction("PublisherRightList", "Home");}
+            <div id="rightList">
+                @{Html.RenderAction("PublisherRightList", "Home");}
+                @{Html.RenderAction("browserInfoRightList", "Home");}
+            </div>
             @RenderBody()
             <div class="c_both">&nbsp;</div>
         </section>

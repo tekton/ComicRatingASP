@@ -85,10 +85,18 @@ namespace ComicRating.Controllers
                 story += rate.story;
             }
 
-            ViewBag.art_avg = art / ratings.Count();
-            ViewBag.overall_avg = overall / ratings.Count();
-            ViewBag.story_avg = story / ratings.Count();
-
+            if (ratings.Count() > 0)// || ratings.Count().Equals(0) == false)
+            {
+                ViewBag.art_avg = art / ratings.Count();
+                ViewBag.overall_avg = overall / ratings.Count();
+                ViewBag.story_avg = story / ratings.Count();
+            }
+            else
+            {
+                ViewBag.art_avg = "No ratings to base calculations one...";
+                ViewBag.overall_avg = "No ratings to base calculations one...";
+                ViewBag.story_avg = "No ratings to base calculations one...";
+            }
             return View(issue);
         }
 
