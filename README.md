@@ -1,6 +1,8 @@
 ComicRatingASP
 ==============
 
+Project is now in CryoSleep for the forseeable future...
+
 ComicRatingASP
 
 Made to learn ASP in a few hours.
